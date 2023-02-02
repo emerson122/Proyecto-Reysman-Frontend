@@ -1,0 +1,47 @@
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="opened=!opened" class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Reysman</span>
+    <span class="example-spacer"></span>
+    <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button> -->
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="salir()">
+      <mat-icon>account_balance_wallet</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened" mode="side">
+      <mat-accordion *ngFor="let i of permisos">
+        <mat-expansion-panel hideToggle *ngIf="i.ID_PADRE == 0">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="text-center">
+               <mat-icon>{{i.ICONO}}</mat-icon>{{i.NOMOBJETO}} 
+            </mat-panel-title>
+             <mat-panel-description>
+              <mat-icon>expand_more</mat-icon>
+            </mat-panel-description> 
+          </mat-expansion-panel-header>
+          <div *ngFor="let j of i.hijos">
+            <button mat-button color="success"  [routerLink]="j.URL">{{j.OBJETO}}</button>
+            <!-- <a [routerLink]="j.URL" class="collapse-item">
+              <span class="material-icons icono">{{j.ICONO}}</span>{{j.OBJETO}}
+            </a> -->
+          </div>  
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="p-2">
+      <router-outlet></router-outlet> 
+    </div>
+</mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+  
+
+

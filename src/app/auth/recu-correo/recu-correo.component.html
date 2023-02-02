@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Recuperacion</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+
+            <section
+                class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+                            <div class="d-flex justify-content-center py-4">
+                                <!-- <h1><strong>TiendasM</strong></h1> -->
+
+                            </div><!-- End Logo -->
+
+                            <div class="card mb-3">
+
+                                <div class="card-body">
+                                    <h2 class="text-center">Recuperación correo electronico</h2>
+                                    <form class="form" [formGroup]="preguntasForm">
+                                        <!-- <h4>Basic mat-select</h4> -->
+                                        <mat-form-field class="example-full-width" style="width: 400px !important"
+                                            appearance="fill">
+                                            <mat-label>Correo electronico</mat-label>
+                                            <input type="text" matInput placeholder="Ingrese un correo electronico valido"
+                                                formControlName="correo" required />
+                                        </mat-form-field>
+                                        <br />
+                                         <button mat-raised-button color="primary" class="w-100" (click)="guardar()">
+                                            Enviar
+                                        </button> 
+                                        <br />
+                    <a  routerLink="/inicio"><strong>Regresar</strong> </a>
+
+                                    </form>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main><!-- End #main -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+
+
+</body>
+
+</html>s
